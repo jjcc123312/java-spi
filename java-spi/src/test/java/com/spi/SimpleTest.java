@@ -15,6 +15,7 @@ public class SimpleTest {
     public void spi() {
         ServiceLoader<IAircondition> load = ServiceLoader
             .load(IAircondition.class);
+        load.iterator().next();
 
         for (IAircondition iAircondition : load) {
             System.out.println("检测到:"+iAircondition.getClass().getSimpleName());
